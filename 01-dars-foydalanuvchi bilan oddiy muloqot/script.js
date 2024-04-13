@@ -1,26 +1,49 @@
 "use strict"
+// const userAge = +prompt("How old are you?", "")
 
-// alert("Hello")
-// const place = confirm("Are you here?")
-// alert(place)
+// if else operator
+// if (userAge > 25) {
+//   console.log("Horror movies")
+// } else if (userAge > 18) {
+//   console.log("Action movies")
+// } else {
+//   console.log("cartoons for Kids")
+// }
 
-// const currentPlace = prompt("Where are you ?")
-// let userData = []
-// if (currentPlace) document.querySelector("h1").innerHTML = currentPlace
-// userData = currentPlace.split(" ")
-// console.log(userData)
+// (ternary) operator
+// userAge > 25 ? console.log("Horror movies") : console.log("Action movies")
 
-// const channel = prompt("What's your favourite youtube channel ?")
-// document.querySelector("a").href = `https://youtube.com/${channel}/videos`
+// switch case operator
+// switch (true) {
+//   case userAge > 25:
+//     console.log("Horror movies")
+//     break
+//   case userAge > 18:
+//     console.log("Action movies")
+//     break
+//   default:
+//     console.log("Cartoons for Kids")
+//     break
+// }
 
-// console.log("Madaminov" + "Behruz")
+// let startNum = 1
 
-// let icrm = 10
-// let decrm = 10
+// while (startNum <= 100) {
+//   console.log(startNum)
+//   startNum++
+// }
 
-// console.log(++icrm)
-// console.log(--decrm)
-// console.log(icrm++)
-// console.log(decrm--)
+// do {
+//   console.log(startNum)
+//   startNum++
+// } while (startNum <= 10)
 
-console.log(10 % 3)
+// for (let i = 1; i <= 10; i++) {
+//   if (i > 8) break
+//   console.log(i)
+// }
+
+// for (let i = 1; i <= 10; i++) {
+//   if (i === 9) continue
+//   console.log(i)
+// }

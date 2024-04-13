@@ -40,6 +40,7 @@ const thief = {
 }
 
 thief.func()
+thief["name"] = "NONE"
 console.table(thief)
 
 // Array
