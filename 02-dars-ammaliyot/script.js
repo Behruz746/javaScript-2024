@@ -1,4 +1,18 @@
-let numberOfSeries = +prompt("Nechta serial ko’rdingiz?", "")
+"use strict"
+let numberOfSeries
+let num = 0
+
+function startApp() {
+  numberOfSeries = +prompt("Nechta serial ko’rdingiz?", "")
+  while (
+    numberOfSeries == "" ||
+    numberOfSeries == null ||
+    isNaN(numberOfSeries)
+  ) {
+    numberOfSeries = +prompt("Nechta serial ko’rdingiz?", "")
+  }
+}
+
 const seriesDB = {
   count: numberOfSeries,
   series: {},
@@ -7,46 +21,39 @@ const seriesDB = {
   privat: false,
 }
 
-for (let i = 1; i <= Infinity; i++) {
-  if (!numberOfSeries == 0) break
-  numberOfSeries = +prompt(
-    `index prompts: ${i} / Infinity Nechta serial ko’rdingiz?`,
-    ""
-  )
+function remeberMySeries() {
+  for (let i = 0; i < 2; i++) {
+    let a = prompt("Oxirgi ko’rgan serialingiz?"),
+      b = prompt("Nechi baxo berasiz?")
+    a != null && b != null && a != "" && b != ""
+      ? (seriesDB.series[a] = b)
+      : i--
+  }
 }
 
-let num = 0
-
-// do {
-//   let a = prompt("Oxirgi ko’rgan serialingiz?"),
-//     b = prompt("Nechi baxo berasiz?")
-//   a != null && b != null && a != "" && b != ""
-//     ? (seriesDB.series[a] = b)
-//     : num--
-//   num++
-// } while (num < 2)
-
-// while (num < 2) {
-//   let a = prompt("Oxirgi ko’rgan serialingiz?"),
-//     b = prompt("Nechi baxo berasiz?")
-//   a != null && b != null && a != "" && b != ""
-//     ? (seriesDB.series[a] = b)
-//     : num--
-//   num++
-// }
-
-for (let i = 0; i < 2; i++) {
-  let a = prompt("Oxirgi ko’rgan serialingiz?"),
-    b = prompt("Nechi baxo berasiz?")
-  a != null && b != null && a != "" && b != "" ? (seriesDB.series[a] = b) : i--
+function showDb(val) {
+  if (!val.privat) console.log(val)
 }
 
-if (numberOfSeries < 5) {
-  console.log("Kam serial ko’ripsiz")
-} else if (numberOfSeries >= 5 && numberOfSeries < 10) {
-  console.log("Siz classik tamoshabin ekansiz")
-} else {
-  console.log("Siz serialchi zvezda ekansiz")
+function writeGenres() {
+  for (let i = 1; i <= 3; i++) {
+    let askGaner = prompt(`Yaxshi ko’rgan janringiz? ${i}`, "")
+    seriesDB.genres.push(askGaner)
+  }
 }
 
-console.log(seriesDB)
+function detectLvlSeries() {
+  if (numberOfSeries < 5) {
+    console.log("Kam serial ko’ripsiz")
+  } else if (numberOfSeries >= 5 && numberOfSeries < 10) {
+    console.log("Siz classik tamoshabin ekansiz")
+  } else {
+    console.log("Siz serialchi zvezda ekansiz")
+  }
+}
+
+startApp()
+remeberMySeries()
+detectLvlSeries()
+writeGenres()
+showDb(seriesDB)
