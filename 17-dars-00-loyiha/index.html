@@ -8,7 +8,7 @@
   </head>
   <body>
     <!-- Loader -->
-    <!-- <section class="loader">
+    <section class="loader">
       <section class="paper_man_wrapper">
         <section class="paper_man">
           <section class="paper_man_body part">
@@ -44,7 +44,7 @@
           </section>
         </section>
       </section>
-    </section> -->
+    </section>
 
     <!-- Header -->
     <header class="header">
@@ -52,8 +52,10 @@
         <div class="header__content">
           <h2>Central Intellegance</h2>
           <div class="btn__group">
-            <button class="button arrow">Read more</button>
-            <button class="button phone">Contact Us</button>
+            <button class="button arrow modal__btn">Read more</button>
+            <button data-modal class="button phone modal__btn">
+              Contact Us
+            </button>
           </div>
         </div>
       </div>
@@ -193,7 +195,9 @@
             class="order__input"
           />
           <img src="icons/right.svg" alt="right" />
-          <button class="button phone order_btn">Contact Us</button>
+          <button data-modal class="button phone order_btn modal__btn">
+            Contact Us
+          </button>
         </form>
       </div>
     </div>
@@ -375,7 +379,7 @@
       <div class="modal__dialog">
         <div class="modal__content">
           <form action="#">
-            <div class="modal__close">&times;</div>
+            <div data-close class="modal__close">&times;</div>
             <div class="modal__title">
               Мы свяжемся с вами как можно быстрее!
             </div>
