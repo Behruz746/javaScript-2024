@@ -64,3 +64,4 @@ console.log(merc._extrapBonus);
 console.log(merc.bonus);
 merc.bonus = 50;
 merc.info();
+ 
